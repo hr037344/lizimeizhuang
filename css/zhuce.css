@@ -1,0 +1,302 @@
+@charset 'utf-8';
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{margin:0;padding:0;}
+body{font-family:'微软雅黑';}
+h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:normal;}
+ul,ol,li{list-style:none;}
+a,u{text-decoration:none;}
+b,strong{font-weight:normal;}
+em,i{font-style:normal;}
+img{border:0;display:block;}
+.clear_fix:after{content:'.';clear:both;height:0;overflow: hidden;display:block;visibility:hidden;}
+.clear_fix{zoom:1;}
+.bottom,.header,.header-bar,.main{
+	width:1423px;
+	}
+body{
+	background:#f5f5f5;
+}
+/*header*/
+.header{
+	height:57px;
+	background:#222;
+}
+.header-bar{
+	height:57px;
+	background:#222;
+}
+.header-con{
+	padding-left: 182px;
+    width: 826px;
+    height: 57px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+}
+.header-con .logo{
+	width:182px;
+	height:68px;
+	position:absolute;
+	top: 0;
+	left: 0;
+}
+.header-con .logo a{
+	width:182px;
+	height:68px;
+	display: block;
+	background: url(../img/login-logo.png) center 0 no-repeat #ff666b;
+}
+.header-con .con-lef{
+	width:310px;
+	height:57px;
+	padding-left:6px;
+	float: left;
+}
+.header-con .con-lef a{
+	display: inline-block;
+    height: 17px;
+    line-height: 17px;
+    color: #eee;
+    padding: 20px 12px;
+    background-color: #222;
+    vertical-align: top;
+    font-size:12px;
+}
+.header-con .con-rig{
+	float: right;
+    width: 300px;
+    color: #eee;
+    text-align: right;
+    height:57px;
+}
+.header-con .con-rig a{
+	display: inline-block;
+    height: 17px;
+    line-height: 17px;
+    color: #eee;
+    padding: 20px 12px;
+    background-color: #222;
+    vertical-align: top;
+    font-size:12px;
+}
+.header-con .con-rig span{
+	display: inline-block;
+    height: 57px;
+    line-height: 57px;
+    font-size:12px;
+}
+/*main*/
+.main{
+	height:452px;
+	width: 1008px;
+    margin: 30px auto 50px;
+}
+.main .box-pic{
+	width:600px;
+	height:450px;
+	float:left;
+}
+.main .zc-box{
+	border: 1px solid #ccc;
+    background-color: #fff;
+    width: 320px;
+    height: 420px;
+    box-shadow: 0 0 15px rgba(204,204,204,.5);
+    float: right;
+    padding: 15px 30px;
+}
+.main .zc-box .register-box{
+	width:320px;
+	height:411px;
+}
+.main .zc-box .zc-txt{
+	display: block;
+	font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+.main .zc-box .trig{
+	float: right;
+    font-size: 12px;
+    letter-spacing: 0;
+    margin-top: 4px;
+}
+.main .zc-box .trig a{
+	color:#000000;
+}
+.register-infor ul .input-box{
+	border: 1px solid #ccc;
+    line-height: 18px;
+    padding: 6px;
+    position: relative;
+    zoom: 1;
+}
+.register-infor ul .input-box input{
+	font-size: 12px;
+}
+.register-infor ul .input-box .t-text{
+	position: absolute;
+    color: #ccc;
+    left: 14px;
+    top: 10px;
+    font-size:12px;
+}
+.register-infor ul .input-box input{
+	border: none;
+    padding: 4px 6px;
+    width: 265px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    vertical-align: middle;
+    color: #333;
+    margin-left: 2px;
+    border:0;
+}
+.register-infor ul .error-box{
+	display: block;
+    height: 24px;
+    line-height: 24px;
+    color: #fe564b;
+    overflow: hidden;
+}
+.register-infor ul .security-code{
+	width:100px;
+}
+.register-infor ul .security-code .code-inpu{
+	width:80px;
+}
+.register-infor ul .security-code .send-code{
+	color: #666;
+    padding: 4px 20px;
+    top: -1px;
+    font-size: 12px;
+    right: -206px;
+    position: absolute;
+    border-radius: 2px;
+    color: #666;
+    background-color: #f5f5f5;
+    border: 1px solid #dedede;
+    height: 40px;
+    line-height:40px;
+}
+.register-infor ul .lizi-low{
+	cursor: default;
+}
+.register-infor ul .lizi-low a{
+	color: #09f;
+	font-size:12px;
+}
+.register-infor ul .lizi-low label{
+	font-size:12px;
+}
+.register-infor ul .go2register{
+	width: 318px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #ff666b;
+    border: 1px solid #ff666b;
+}
+.register-infor ul .go2register a{
+	color:#fff;
+}
+
+
+/*bottom*/
+.bottom{
+	height:173px;
+	background:url(../img/footer-bg.jpg);
+	border-top:2px solid #ff666b;
+	padding:30px 0;
+}
+.bottom-con{
+	height:173px;
+	width:1200px;
+	margin: 0 auto;
+	
+	position: relative;
+}
+.bottom-con-nav{
+	height:22px;
+	width:1200px;
+	font-size:12px;
+	color:#fff;
+}
+.bottom-con-nav a{
+	color:#fff;
+}
+.bottom-con-txt{
+	width:1200px;
+	height:151px;
+	color:#fff;
+	font-size:12px;
+}
+.bottom-con-txt a{
+	color:#fff;
+}
+.bottom-con-txt p{
+	width:1200px;
+	height:18px;
+	padding: 5px 0;
+}
+.bottom-con-txt .p2{
+	width:1200px;
+	height:20px;
+	padding: 5px 0;
+}
+.bottom-con-txt .p2 span{
+	float: left;
+	margin-right:10px ;
+}
+.bottom-con-txt .p2 img{
+	width:16px;
+	height:16px ;
+	float:left;
+}
+.bottom-con-txt .p3{
+	width:1200px;
+	height:65px;
+	margin-top: 20px;
+}
+.bottom-con-txt .p3 a{
+	float: left;
+	margin-right:15px;
+}
+.gzh{
+	width:140px;
+	height:137px;
+	position:absolute;
+	right: 240px;
+	top:10px;
+	text-align:center;
+}
+.gzh img{
+	width:90px;
+	height: 90px;
+	margin: 0 25px;
+}
+.gzh p{
+	font-size:14px;
+	color:#fff;
+}
+.khd{
+	width:140px;
+	height:137px;
+	position:absolute;
+	right: 40px;
+	top:10px;
+	text-align:center;
+}
+.khd img{
+	width:73px;
+	height: 91px;
+	margin: 0 33px;
+}
+.khd p a{
+	font-size:14px;
+	color:#fff;
+}

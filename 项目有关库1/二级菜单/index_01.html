@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>二级菜单</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			#div div {
+				display: none;
+				width: 300px;
+				height: 300px;
+				background: yellow;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var $a = $("#a");
+				var $level01 = $("#ul"); //一级菜单
+				var $level02 = $("#div"); //二级菜单
+
+				//获取json
+				$.getJSON("js/menu.json", function(json) {
+					console.log(json.menu);
+					var myMenu = json.menu;
+					//console.log(myMenu);
+					
+					var myOne = myMenu.one;
+					var myTwo = myMenu.two;
+					//console.log(myOne);
+					$.each(myOne,function(j){
+						$("<li>" + myOne[j] + "</li>").appendTo("#ul");
+					})
+					$.each(myTwo,function(i){
+						$("<div>" + myTwo[i] + "</div>").appendTo("#div");
+					})
+					
+					$level01.mouseover(function() {
+						$(this).css("display", "block");
+					});
+					var onOff = false;
+					$a.click(function(){
+						if(onOff){
+							$level01.css("display", "block");
+						}else{
+							$level01.css("display", "none");
+						}
+						onOff = !onOff;
+					})
+					$a.hover(function(){
+						$level01.css("display", "block");
+					},function(){
+						if(onOff){
+							$level01.css("display", "block");
+						}else{
+							$level01.css("display", "none");
+						}
+					})
+
+//					$("ul li").mouseover(function() {
+//						$level02.css("display", "block");
+//						$("#div div").css("display", "none").eq($(this).index()).css("display", "block");
+//					});
+//					$("#div div").mouseout(function() {
+//						$level01.css("display", "none");
+//						$level02.css("display", "none");
+//					});
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<a href="#" id="a" style="display:block; width:100px; background:red;">全部商品</a>
+
+		<ul id="ul" style="width:100px; height:300px; padding:0; margin:0; background:green;float:left; display:none;">
+			<!--<li>一级菜单A</li>
+			<li>一级菜单B</li>
+			<li>一级菜单C</li>-->
+		</ul>
+		<div id="div" style="float:left;">
+			<!--<div>二级AAAA</div>
+			<div>二级BBBB</div>
+			<div>二级CCCC</div>-->
+		</div>
+	</body>
+
+</html>
